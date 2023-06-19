@@ -43,8 +43,16 @@ public class Turma {
 
 	@Override
 	public String toString() {
+		String lstAluno = "\n[Mat, Nome, Ano Nasc., e-mail, Ativo]\n";
+		for (Aluno a : listaAlunos) {
+			lstAluno += a + "\n"; 
+		}
 		return "Turma [codigo = " + codigo + ", serie = " + serie + ", turno = " + turno + "]"
-				+ "\nLista de Alunos:\n" + listaAlunos;
+				+ "\nLista de Alunos:" + lstAluno;
+	}
+	
+	public void adicionarAluno(Aluno aluno) {
+		listaAlunos.add(aluno);
 	}
 
 }
