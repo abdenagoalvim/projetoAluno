@@ -11,6 +11,14 @@ public class Principal {
 		
 		System.out.println(a1);
 		System.out.println(a2);
+		
+		Turma t1 = new Turma();
+		t1.setCodigo(713);
+		t1.setSerie(3);
+		t1.setTurno("Tarde");
+		Turma t2 = new Turma(725, 3, "Manhã");
+		
+		System.out.println(t1);
+		System.out.println(t2);
 	}
-
 }
