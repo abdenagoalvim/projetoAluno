@@ -47,13 +47,23 @@ public class Aluno {
 
 	@Override
 	public String toString() {
-		return "Aluno ["
-				+ "\n\tmatricula = " + matricula 
-				+ ",\n\tnome = " + nome 
-				+ ",\n\tanoNasc = " + anoNasc 
-				+ ",\n\temail = " + email
-				+ ",\n\tativo = " + (ativo?"Sim":"Não")
-				+ "\n]";
+//		return "Aluno ["
+//				+ "\n\tmatricula = " + matricula 
+//				+ ",\n\tnome = " + nome 
+//				+ ",\n\tanoNasc = " + anoNasc 
+//				+ ",\n\temail = " + email
+//				+ ",\n\tativo = " + (ativo?"Sim":"Não")
+//				+ "\n]";
+
+		return "[" + matricula + ", " + nome + ", " + anoNasc + ", " + email
+		+ ", " + (ativo?"Sim":"Não") + "]";
 	}
 	
+	public void ativar() {
+		this.setAtivo(true);
+	}
+	
+	public void suspender() {
+		this.setAtivo(false);
+	}
 }
