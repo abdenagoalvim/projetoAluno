@@ -54,5 +54,21 @@ public class Turma {
 	public void adicionarAluno(Aluno aluno) {
 		listaAlunos.add(aluno);
 	}
+	
+	public void excluirAluno(int matricula) {
+		int id = -1;
+		for(int i=0; i < this.listaAlunos.size(); i++ ) {
+			if(this.listaAlunos.get(i).getMatricula() == matricula) {
+				id = i;
+				break;
+			}
+		}
+		if (id == -1) {
+			System.out.println("Aluno não encontrado!!!");
+		} else {
+			this.listaAlunos.remove(id);
+			System.out.println("Aluno excluído da turma");
+		}
+	}
 
 }
