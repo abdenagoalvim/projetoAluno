@@ -22,7 +22,7 @@ public class Principal {
 		Aluno a3 = new Aluno(7, "Marieta");
 		a3.setAnoNasc(2010);
 		a3.ativar();
-		Aluno a4 = new Aluno(7, "Orozimbo");
+		Aluno a4 = new Aluno(8, "Orozimbo");
 		a4.setAnoNasc(1975);
 		a4.ativar();
 		
@@ -30,8 +30,11 @@ public class Principal {
 		t2.adicionarAluno(a3);
 		t2.adicionarAluno(a4);
 		
-		
 		System.out.println(t1);
 		System.out.println(t2);
+
+		t1.excluirAluno(0);
+		System.out.println(t1);
+		
 	}
 }
