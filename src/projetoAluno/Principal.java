@@ -27,6 +27,7 @@ public class Principal {
 		a4.ativar();
 		
 		Turma t2 = new Turma(725, 3, "Manhã");
+		t2.adicionarAluno(a2);
 		t2.adicionarAluno(a3);
 		t2.adicionarAluno(a4);
 		
@@ -36,5 +37,21 @@ public class Principal {
 		t1.excluirAluno(0);
 		System.out.println(t1);
 		
+		Aluno a5 = t2.consultarAluno(7);
+		if (a5 != null) {
+			System.out.println("Aluno localizado:");
+			System.out.println(a5);
+		}
+		Aluno a6 = t2.consultarAluno("Orozimbo");
+		if (a6 != null) {
+			System.out.println("Aluno localizado:");
+			System.out.println(a6);
+		}
+		// teste para o segundo if da consulta na classe Turma (comente o primeiro if e descomente o segundo)
+		Aluno a7 = t2.consultarAluno("Jose"); 
+		if (a7 != null) {
+			System.out.println("Aluno localizado:");
+			System.out.println(a7);
+		}
 	}
 }
