@@ -70,5 +70,27 @@ public class Turma {
 			System.out.println("Aluno excluído da turma");
 		}
 	}
-
+	
+	public Aluno consultarAluno(int matricula) {
+		Aluno aln = null;
+		for(int i=0; i < this.listaAlunos.size(); i++ ) {
+			if(this.listaAlunos.get(i).getMatricula() == matricula) {
+				aln = this.listaAlunos.get(i);
+				break;
+			}
+		}
+		return aln;
+	}
+	
+	public Aluno consultarAluno(String nome) {
+		Aluno aln = null;
+		for(int i=0; i < this.listaAlunos.size(); i++ ) {
+			if(this.listaAlunos.get(i).getNome().equals(nome)) { //localiza o aluno se o seu nome for exatamente igual ao passado por parâmetro
+//			if(this.listaAlunos.get(i).getNome().contains(nome)) { //localiza o aluno se o seu nome contém o nome passado por parâmetro
+				aln = this.listaAlunos.get(i);
+				break;
+			}
+		}
+		return aln;
+	}
 }
